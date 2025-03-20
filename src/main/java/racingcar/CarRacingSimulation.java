@@ -6,17 +6,26 @@ import java.util.List;
 
 public class CarRacingSimulation {
     private List<Car> cars = new ArrayList<>();
+    private int round = 0;
 
-    public CarRacingSimulation(String cars) {
-        String[] carNames = cars.split(",");
+    public void CreateCars(String carsString){
+        String[] carNames = carsString.split(",");
         for (String carName : carNames) {
             this.cars.add(new Car(carName));
         }
     }
 
-    public void simulate(int round) {
+    public void writeRound(String roundString) {
+        try {
+            this.round = Integer.parseInt(roundString);
+        } catch (Exception e) {
+            throw new IllegalArgumentException("[ERROR] round Error");
+        }
+    }
+
+    public void simulate() {
         System.out.println("\n실행 결과");
-        for (int i = 0; i < round; i++) {
+        for (int i = 0; i < this.round; i++) {
             for (Car car : cars) {
                 car.move();
             }
