@@ -15,10 +15,12 @@ public class CarRacingSimulation {
     }
 
     public void simulate(int round) {
+        System.out.println("\n실행 결과");
         for (int i = 0; i < round; i++) {
             for (Car car : cars) {
                 car.move();
             }
+            System.out.println();
         }
     }
 
@@ -36,6 +38,6 @@ public class CarRacingSimulation {
             else break;
         }
         
-        System.out.print("최종 우승자는 "+ String.join(", ", winnerCarNames) +" 입니다.");
+        System.out.print("최종 우승자 : "+ String.join(", ", winnerCarNames));
     }
 }
