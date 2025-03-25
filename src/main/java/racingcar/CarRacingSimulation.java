@@ -8,7 +8,7 @@ public class CarRacingSimulation {
     private final List<Car> cars = new ArrayList<>();
     private int round = 0;
 
-    public void CreateCars(String carsString){
+    public void CreateCars(String carsString) {
         String[] carNames = carsString.split(",");
         for (String carName : carNames) {
             this.cars.add(new Car(carName));
@@ -43,10 +43,11 @@ public class CarRacingSimulation {
         for (Car car : sortedCars) {
             if (car.getLocation() == maxLocation) {
                 winnerCarNames.add(car.getName());
+            } else {
+                break;
             }
-            else break;
         }
-        
-        System.out.print("최종 우승자 : "+ String.join(", ", winnerCarNames));
+
+        System.out.print("최종 우승자 : " + String.join(", ", winnerCarNames));
     }
 }

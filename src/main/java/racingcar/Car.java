@@ -13,8 +13,8 @@ public class Car {
         this.location = 0;
     }
 
-    public void move(){
-        if(RandomNumberUtil.generateNumber()>= 4){
+    public void move() {
+        if (RandomNumberUtil.generateNumber() >= 4) {
             location++;
         }
         System.out.println(name + " : " + "-".repeat(location));
