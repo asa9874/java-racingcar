@@ -1,15 +1,14 @@
 package racingcar;
 
 import racingcar.util.RandomNumberUtil;
+import racingcar.util.ValidationUtil;
 
 public class Car {
     private String name = "홍길동";
     private int location = 0;
 
     public Car(String name) {
-        if( name == null || name.length()>5 || name.length()==0 ){
-            throw new IllegalArgumentException("[ERROR] Car Name Error");
-        }
+        ValidationUtil.validateCarName(name);
         this.name = name;
         this.location = 0;
     }
