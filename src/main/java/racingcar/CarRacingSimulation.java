@@ -5,7 +5,7 @@ import java.util.Comparator;
 import java.util.List;
 
 public class CarRacingSimulation {
-    private List<Car> cars = new ArrayList<>();
+    private final List<Car> cars = new ArrayList<>();
     private int round = 0;
 
     public void CreateCars(String carsString){
