@@ -15,7 +15,7 @@ public class CarRacingSimulation {
         }
     }
 
-    public void writeRound(String roundString) {
+    public void setRound(String roundString) {
         try {
             this.round = Integer.parseInt(roundString);
         } catch (Exception e) {

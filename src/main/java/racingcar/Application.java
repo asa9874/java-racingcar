@@ -12,7 +12,7 @@ public class Application {
 
         System.out.println("시도할 회수는 몇회인가요?");
         String roundString = Console.readLine();
-        carRacingSimulation.writeRound(roundString);
+        carRacingSimulation.setRound(roundString);
 
         carRacingSimulation.simulate();
         carRacingSimulation.getWinners();
