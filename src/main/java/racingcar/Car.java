@@ -1,6 +1,6 @@
 package racingcar;
 
-import camp.nextstep.edu.missionutils.Randoms;
+import racingcar.util.RandomNumberUtil;
 
 public class Car {
     private String name = "홍길동";
@@ -14,9 +14,8 @@ public class Car {
         this.location = 0;
     }
 
-    // 무작위 숫자가 4이상일때 움직임
     public void move(){
-        if(Randoms.pickNumberInRange(0,9) >= 4){
+        if(RandomNumberUtil.generateNumber()>= 4){
             location++;
         }
         System.out.println(name + " : " + "-".repeat(location));
