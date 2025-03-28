@@ -19,7 +19,7 @@ public class CarRacingSimulation {
         try {
             this.round = Integer.parseInt(roundString);
         } catch (Exception e) {
-            throw new IllegalArgumentException("[ERROR] round Error");
+            throw new IllegalArgumentException("[ERROR] wrong round input.");
         }
     }
 
