@@ -7,6 +7,6 @@ public class RandomNumberUtil {
     private static final int END_NUMBER = 9;
 
     public static int generateNumber() {
-        return Randoms.pickNumberInRange(0, 9);
+        return Randoms.pickNumberInRange(START_NUMBER, END_NUMBER);
     }
 }
